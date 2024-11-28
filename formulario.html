@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVA accessories</title>
+    <style>
+        /* Estilos generales del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff9e6; /* Amarillo muy tenue, casi blanco */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilo del contenedor del formulario */
+        form {
+            background-color: #fff7f7; /* Rosa muy tenue, casi blanco */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+            width: 100%;
+            max-width: 450px;
+            text-align: left;
+        }
+
+        /* Estilo para los encabezados */
+        h1 {
+            font-size: 28px;
+            color: #f8bbd0; /* Rosa muy tenue */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de los labels */
+        label {
+            font-size: 14px;
+            color: #777; /* Gris suave para los textos */
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Estilo de los campos de texto, contraseña y select */
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #f8bbd0; /* Rosa muy tenue en los bordes */
+            border-radius: 6px;
+            background-color: #fff9f9; /* Fondo rosa muy claro */
+            font-size: 15px;
+        }
+
+        /* Efecto cuando el campo está en foco */
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+            border-color: #f48fb1; /* Rosa más intenso al foco */
+            outline: none;
+        }
+
+        /* Estilo de los radio buttons */
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Estilo de los checkbox */
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Estilo del botón de envío */
+        input[type="submit"] {
+            background-color: #fff9e6; /* Amarillo muy tenue */
+            color: #ffffff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f6c957; /* Amarillo más intenso al pasar el cursor */
+        }
+
+        /* Estilo de los enlaces */
+        a {
+            color: #f48fb1; /* Rosa suave para el enlace */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo de los elementos de error */
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+            alert("Formulario enviado correctamente. ¡Gracias por registrarte!");
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validarFormulario(event)">
+        <h1>AVA ACCESSORIES</h1>
+        
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required><br>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa una contraseña" required><br>
+        
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="">Selecciona</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select><br>
+        
+        <label for="edad">Rango de edad:</label><br>
+        <input type="radio" id="18-25" name="edad" value="18-25">
+        <label for="18-25">18-25</label><br>
+        
+        <input type="radio" id="26-35" name="edad" value="26-35">
+        <label for="26-35">26-35</label><br>
+        
+        <input type="radio" id="36-50" name="edad" value="36-50">
+        <label for="36-50">36-50</label><br><br>
+        
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los <a href="">términos y condiciones</a></label><br><br>
+        
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>
+
